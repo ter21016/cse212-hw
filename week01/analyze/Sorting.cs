@@ -14,4 +14,31 @@
             }
         }
     }
+
+    public static double StandardDeviation1(List<int> data) {
+    double mean = data.Average();
+    double sumOfSquares = data.Sum(x => Math.Pow(x - mean, 2));
+    return Math.Sqrt(sumOfSquares / data.Count);
+    }
+
+    public static double StandardDeviation2(List<int> data) {
+    double sum = 0;
+    double squareSum = 0;
+    foreach (var num in data) {
+        sum += num;
+        squareSum += num * num;
+    }
+    double mean = sum / data.Count;
+    double variance = squareSum / data.Count - (mean * mean);
+    return Math.Sqrt(variance);
+    }
+
+    public static double StandardDeviation3(List<int> data) {
+    double mean = data.Average();
+    double variance = data.Select(val => (val - mean) * (val - mean)).Sum() / data.Count;
+    return Math.Sqrt(variance);
+    }
+
+
+
 }
