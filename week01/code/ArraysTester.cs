@@ -67,34 +67,34 @@ public static class ArraysTester
         // TODO Problem 2 Start
 
         //Create a new list to store the roated array
-        List<int> rotatedArray = new List<int>();
+        List<int> rotateArray = new List<int>();
 
 
         // Calculate the starting index for the rotation
         // This ensures the first values in the rotated list are the elements that need to be rotated
-        int startIndex = data.Count - amount;
+        int rotateAmount = data.Count - amount;
 
 
         // // Add the elements from the starting index to the end of the original list to the rotated list
-        for (int i = startIndex; i < data.Count; i++)
+        for (int i = rotateAmount; i < data.Count; i++)
         {
             int value = data[i];
-            rotatedArray.Add(value);
+            rotateArray.Add(value);
         }
 
         // Add the remaining elements from the beginning of the original list to just before the starting index to the rotated list
 
-        for (int j = startIndex - 1; j >= 0; j--)
+        for (int j = rotateAmount - 1; j >= 0; j--)
         {
             int value = data[j];
-            rotatedArray.Add(value);
+            rotateArray.Add(value);
         }
 
         //clear the original list to prepare for the roatated values
         data.Clear();
 
         //Add the roated elements back to the original list
-        data.AddRange(rotatedArray);
+        data.AddRange(rotateArray);
 
 
 
