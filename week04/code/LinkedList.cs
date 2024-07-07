@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 public class LinkedList : IEnumerable<int> {
     private Node? _head;

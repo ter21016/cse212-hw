@@ -1,5 +1,9 @@
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
+
 public class FeatureCollection
 {
+
     // Todo Earthquake Problem - ADD YOUR CODE HERE
     // Create additional classes as necessary
     public List<Feature> Features
