@@ -341,6 +341,6 @@ public static class RecursionTester
         }
 
 
-        //Console.WriteLine(currPath.AsString()); // Use this to print out your path when you find the solution
+        Console.WriteLine(currPath.AsString()); // Use this to print out your path when you find the solution
     }
 }
